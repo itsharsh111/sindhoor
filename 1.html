@@ -1,117 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Survey Form</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
-      height: 100vh;
-      color: #fff;
-    }
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      height: 100%;
-      padding: 50px 0;
-    }
+        <div class="form-group">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitely</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Maybe</label
+          >
 
-    form {
-      background-color: rgba(0, 0, 0, 0.8);
-      max-width: 600px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    }
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure</label
+          >
+        </div>
 
-    h1, p {
-      text-align: center;
-    }
+        <div class="form-group">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
 
-    label {
-      display: block;
-      margin: 20px 0 5px;
-    }
+        <div class="form-group">
+          <p>
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
+          </p>
 
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      margin-bottom: 10px;
-    }
+          <label
+            ><input
+              name="prefer"
+              value="front-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Front-end Projects</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Back-end Projects</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="data-visualization"
+              type="checkbox"
+              class="input-checkbox"
+            />Data Visualization</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="challenges"
+              type="checkbox"
+              class="input-checkbox"
+            />Challenges</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="open-source-community"
+              type="checkbox"
+              class="input-checkbox"
+            />Open Source Community</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="gitter-help-rooms"
+              type="checkbox"
+              class="input-checkbox"
+            />Gitter help rooms</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="videos"
+              type="checkbox"
+              class="input-checkbox"
+            />Videos</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="city-meetups"
+              type="checkbox"
+              class="input-checkbox"
+            />City Meetups</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="wiki"
+              type="checkbox"
+              class="input-checkbox"
+            />Wiki</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="forum"
+              type="checkbox"
+              class="input-checkbox"
+            />Forum</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="additional-courses"
+              type="checkbox"
+              class="input-checkbox"
+            />Additional Courses</label
+          >
+        </div>
 
-    input[type="radio"], input[type="checkbox"] {
-      width: auto;
-      margin-right: 10px;
-    }
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
 
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #37af65;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #2f9e57;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <form id="survey-form">
-      <h1>freeCodeCamp Survey Form</h1>
-      <p>Thank you for taking the time to help us improve the platform</p>
-
-      <label for="name">Name</label>
-      <input type="text" id="name" required placeholder="Enter your name" />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" required placeholder="Enter your email" />
-
-      <label for="age">Age (optional)</label>
-      <input type="number" id="age" min="10" max="99" placeholder="Age" />
-
-      <label for="role">Which option best describes your current role?</label>
-      <select id="role" required>
-        <option value="">Select current role</option>
-        <option>Student</option>
-        <option>Full Time Job</option>
-        <option>Full Time Learner</option>
-        <option>Prefer not to say</option>
-        <option>Other</option>
-      </select>
-
-      <label>Would you recommend freeCodeCamp to a friend?</label>
-      <input type="radio" name="recommend" value="definitely" required> Definitely
-      <input type="radio" name="recommend" value="maybe"> Maybe
-      <input type="radio" name="recommend" value="notSure"> Not sure
-
-      <label>What would you like to see improved? (Check all that apply)</label>
-      <input type="checkbox" value="frontend"> Front-end Projects<br>
-      <input type="checkbox" value="backend"> Back-end Projects<br>
-      <input type="checkbox" value="data"> Data Visualization<br>
-      <input type="checkbox" value="challenges"> Challenges<br>
-      <input type="checkbox" value="open-source"> Open Source Community<br>
-
-      <label for="comments">Any comments or suggestions?</label>
-      <textarea id="comments" rows="4" placeholder="Enter your comment here..."></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</body>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
