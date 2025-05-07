@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url(Gym.jpg);
+    /* font-family: 'Lora', serif;
+    font-family: 'Noto Sans', sans-serif; */
+}
+.left{
+    display: inline;
+    position: absolute;
+    left: 90px;
+    top: -45px;
+    padding: 0px;
+
+}
+.left img{
+    filter: invert(100%);
+    width: 200px;
+    height: 200px;
+}
+
+
+.mid ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0px 20px;
+    font-size: x-large;
+}
+.mid ul li a:hover{
+    text-decoration: underline;
+    color: rgb(154, 157, 154);
+}
+.mid {
+    border: 2px solid none;
+    /* display: inline; */
+    width: 45%;
+    margin: 25px auto;
+}
+
+.mid ul li {
+    display: inline-block;
+}
+.right{
+    display: inline;
+    position: absolute;
+    right: 10px;
+    top: 25px ;
+}
+.btn{
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    border: 1px solid white;
+    font-size: large;
+    margin-left:15px;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+.content{
+    text-align: center;
+    color: white;
+    display: inline-block;
+    width: 35%;
+    border: 2px solid white;
+    border-radius: 25px;
+    position: relative;
+    top: 140px;
+    left: 150px;
+}
+.content input{
+    text-align: center;
+    height: 25px;
+    width: 59%;
+    margin: 5px;
+    border: none;
+    border-radius: 9px;
+}
+.join h3{
+    padding: 1px;
+}
+.search{
+    margin-top: 6px;
+    margin-bottom: 40px;
+}
+.search button{
+    width: 59%;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 9px;
+    padding: 6.5px;
+    
+}
